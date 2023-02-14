@@ -4,7 +4,6 @@ const expect = require("chai").expect;
 const providers = require("ethers").providers;
 const Wallet = require("ethers").Wallet;
 const ethers = require("hardhat").ethers;
-// const run = require("hardhat").run;
 const FxStateRootTunnel = require("../artifacts/contracts/examples/state-transfer/FxStateRootTunnel.sol/FxStateRootTunnel.json");
 const FxStateChildTunnel = require("../artifacts/contracts/examples/state-transfer/FxStateChildTunnel.sol/FxStateChildTunnel.json");
 
@@ -149,17 +148,4 @@ describe("FxState Tunnel Deployment", function () {
   // NOTE: The cross-chain transaction might take a while to be validated.
   // Watch Event Logs here: https://mumbai.polygonscan.com/address/0xcf73231f28b7331bbe3124b907840a94851f9f11#events
   // Watch for transactions here: https://mumbai.polygonscan.com/address/0x0000000000000000000000000000000000000000
-
-  // describe("Verify Contracts", function () {
-  //   it("Should have verified the root contract.", async function () {
-  //     let res = await run(`verify:verify`, {
-  //       address: rootTunnelAddress,
-  //       constructorArguments: [GOERLI_CHECKPOINT_MANAGER, GOERLI_FX_ROOT],
-  //       network: "goerli",
-  //     });
-  //     console.log("Root contract verification result: ", res);
-
-  //     expect(1).equals(1);
-  //   });
-  // });
 });

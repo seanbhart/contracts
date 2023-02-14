@@ -1,3 +1,33 @@
+# Sean's FxPortal Tests
+
+This repo contains a few tests for the FxPortal contracts.
+
+## Setup
+
+Fill in the `.envtemplate` file with your private keys and APIs and rename it to `.env`
+
+## FxStateTunnel Tests
+
+Contracts:
+
+- `/contracts/examples/state-transfer/...`
+
+Tests:
+
+- `test/FxStateTunnel.test.js`
+- `test/FxStateTunnelCheck.test.js`
+
+Instructions:
+
+- Run `FxStateTunnel.test.js` to deploy `FxStateRootTunnel` and `FxStateChildTunnel` on Ethereum (Goerli) and Polygon (Mumbai) respectively.
+- Copy the addresses from the console output and paste them into the needed variables in `FxStateTunnelCheck.test.js`:
+  - `rootTunnelAddress`: from `Deployed Root Tunnel Contract: ...`
+  - `childTunnelAddress`: from `Deployed Child Tunnel Contract: ...`
+- Run `FxStateTunnelCheck.test.js` to check that the state is transferred from Ethereum to Polygon.
+
+<br>
+<br>
+
 # fx-portal(Flexible portal)
 
 FxPortal for Polygon(prev Matic)Chain. No mapping. Seamless communication with Ethereum Network.

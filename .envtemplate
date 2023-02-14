@@ -1,0 +1,16 @@
+ACCOUNT_KEY_PRIV_LOCAL=
+ACCOUNT_KEY_PRIV_MAINNET=
+ACCOUNT_KEY_PRIV_GOERLI=
+ACCOUNT_KEY_PRIV_POLYGON=
+ACCOUNT_KEY_PRIV_MUMBAI=
+
+NETWORK_MAINNET=https://mainnet.infura.io/v3/...
+NETWORK_GOERLI=https://goerli.infura.io/v3/...
+NETWORK_LOCAL=http://127.0.0.1:8545/
+
+NETWORK_POLYGON=https://polygon-mainnet.infura.io/v3/...
+NETWORK_POLYGON_MUMBAI=https://polygon-mumbai.infura.io/v3/...
+
+COIN_MARKET_CAP=
+ETHERSCAN=
+POLYGONSCAN=
