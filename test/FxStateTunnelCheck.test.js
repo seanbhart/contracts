@@ -11,8 +11,8 @@ describe("FxState Tunnel Checks", function () {
   const MUMBAI_FX_CHILD = `0xCf73231F28B7331BBe3124B907840A94851f9f11`;
 
   // IMPORTANT: UPDATE THESE ADDRESSES BEFORE TESTING
-  const TUNNEL_ROOT = `0xCc1059d44dC80ce103f0775Fc84f42E5B6475c4e`;
-  const TUNNEL_CHILD = `0xc518B277d1D32d96E2f4552753Ecf6e28229D33A`;
+  const rootTunnelAddress = `0x4dd55B02005e4bc83b68CC33ae9325EacE6AB75f`;
+  const childTunnelAddress = `0xB4914bb58953380b54B7b041129ea2c5b3E0714B`;
 
   const JSON_RPC_GOERLI = `${process.env.NETWORK_GOERLI}`;
   const JSON_RPC_POLYGON_MUMBAI = `${process.env.NETWORK_POLYGON_MUMBAI}`;
@@ -48,7 +48,7 @@ describe("FxState Tunnel Checks", function () {
   describe("Tunnel Checks", function () {
     it("Child Tunnel address on Root Tunnel contract should have been updated from burn address", async function () {
       rootTunnel = new Contract(
-        TUNNEL_ROOT,
+        rootTunnelAddress,
         FxStateRootTunnel.abi,
         providerGoerli
       );
@@ -66,12 +66,12 @@ describe("FxState Tunnel Checks", function () {
         );
       }
 
-      expect(childTunnelCheck).equals(TUNNEL_CHILD);
+      expect(childTunnelCheck).equals(childTunnelAddress);
     });
 
     it("Check Child Tunnel variables", async function () {
       childTunnel = new Contract(
-        TUNNEL_CHILD,
+        childTunnelAddress,
         FxStateChildTunnel.abi,
         providerMumbai
       );
@@ -93,7 +93,7 @@ describe("FxState Tunnel Checks", function () {
         );
       }
 
-      expect(rootTunnelCheck).equals(TUNNEL_ROOT);
+      expect(rootTunnelCheck).equals(rootTunnelAddress);
     });
   });
 });
